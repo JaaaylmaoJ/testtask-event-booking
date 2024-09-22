@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  app.event-booking.nginx:
+    restart: always
+    image: nginx:alpine
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    tty: true
+    ports:
+      - "8080:80"
+
+  app.event-booking.php:
+    restart: always
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    env_file:
+      - ./.env
+    working_dir: /var/www/html
+    volumes:
+      - ./app/:/var/www/html
+      - ./docker/php/conf.d/php-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+    tty: true

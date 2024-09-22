@@ -1,0 +1,24 @@
+{
+  "components": {
+    "parameters": {
+      "showId": {
+        "in": "query",
+        "name": "showId",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "example": 14
+        }
+      },
+      "eventId": {
+        "in": "query",
+        "name": "eventId",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "example": 34
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Title",
+    "description": "Title",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "{schema}://{host}/",
+      "variables": {
+        "schema": {
+          "enum": [
+            "http"
+          ],
+          "default": "http"
+        },
+        "host": {
+          "default": "booking.localhost:8080"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/show": {"$ref":  "./_paths/show.json"},
+    "/show/event": {"$ref":  "./_paths/event.json"},
+    "/show/event/place": {"$ref":  "./_paths/place.json"},
+    "/show/event/place/book": {"$ref":  "./_paths/book-place.json"}
+  }
+}

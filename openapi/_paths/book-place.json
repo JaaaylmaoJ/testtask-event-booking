@@ -1,0 +1,59 @@
+{
+  "post": {
+    "responses": {
+      "200": {
+        "description": "Успех",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "bool",
+                      "example": "true"
+                    },
+                    "reservation_id": {
+                      "type": "string",
+                      "example": "5d519fe58e3cf"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "$ref": "../_components/request.json#/components/parameters/eventId"
+      }
+    ],
+    "requestBody": {
+      "required": true,
+      "content": {
+        "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "Валерий Альбертович"
+              },
+              "places": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "example": 199
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "components": {
+    "schemas": {
+      "show": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 5
+          },
+          "name": {
+            "type": "string",
+            "example": "Show #5"
+          }
+        }
+      },
+      "event": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 27
+          },
+          "showId": {
+            "type": "integer",
+            "example": 14
+          },
+          "date": {
+            "type": "string",
+            "example": "2019-09-01 20:26:38"
+          }
+        }
+      },
+      "place": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 27
+          },
+          "x": {
+            "type": "float",
+            "example": 0
+          },
+          "y": {
+            "type": "float",
+            "example": 0
+          },
+          "width": {
+            "type": "float",
+            "example": 20
+          },
+          "height": {
+            "type": "float",
+            "example": 20
+          },
+          "is_available": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      }
+    }
+  }
+}

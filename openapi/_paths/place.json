@@ -1,0 +1,33 @@
+{
+  "get": {
+    "responses": {
+      "200": {
+        "description": "Успех",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "response": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "../_components/response.json#/components/schemas/place"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": [
+      {
+        "$ref": "../_components/request.json#/components/parameters/eventId"
+      }
+    ]
+  }
+}

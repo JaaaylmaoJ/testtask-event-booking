@@ -1,0 +1,24 @@
+//@no-log
+GET https://leadbook.ru/test-task-api/shows
+Authorization: Bearer {{bearer}}
+###
+
+//@no-log
+GET https://leadbook.ru/test-task-api/shows/2/events
+Authorization: Bearer {{bearer}}
+###
+
+
+//@no-log
+GET https://leadbook.ru/test-task-api/events/2/places
+Authorization: Bearer {{bearer}}
+###
+
+//@no-log
+POST https://leadbook.ru/test-task-api/events/2/reserve
+Authorization: Bearer {{bearer}}
+Content-Type: application/x-www-form-urlencoded
+
+name=Жмышенко%20Валерий &
+places[]=199
+###

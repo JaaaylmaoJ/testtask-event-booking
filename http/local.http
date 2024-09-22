@@ -1,0 +1,27 @@
+//@no-log
+GET http://booking.localhost:8080/api/v1/show
+Authorization: Bearer {{bearer}}
+###
+
+//@no-log
+GET http://booking.localhost:8080/api/v1/show/event?showId=14
+Authorization: Bearer {{bearer}}
+###
+
+//@no-log
+GET http://booking.localhost:8080/api/v1/show/event/place?eventId=67
+Authorization: Bearer {{bearer}}
+###
+
+//@no-log
+POST http://booking.localhost:8080/api/v1/show/event/place/book?eventId=67
+Authorization: Bearer {{bearer}}
+Content-Type: application/json
+
+{
+  "name": "Жмышенко Валерий",
+  "places": [
+    199
+  ]
+}
+###
